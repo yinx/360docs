@@ -69,7 +69,7 @@ We started out working on the newly created milestone-service.
 <a name="ci"></a>
 ## The Continuous integration work flow 
 
-![alt text](ci-workflow.png "ci work flow")
+![alt text](CI-workflow.png "ci work flow")
 
 As a part of the project we use a continuous integration work flow starting from the developer through github, travis and eventually pivotal.
 
@@ -467,7 +467,7 @@ Next up we'll provide some more details for each microservice, we'll go more in 
 The first service we'll cover will be the Gateway service or Zuul since it is the service that each call will go through before it is sent to the other services.
 This makes it our entry point after the Front-end.
  
-![alt text](gatewaydiagram.png "gateway")
+![alt text](Gatewaydiagram.png "gateway")
 
 [![Gateway Service](https://coveralls.io/repos/github/Ordineo/gateway/badge.svg?branch=master)](https://coveralls.io/github/Ordineo/gateway?branch=master) 
 
@@ -494,7 +494,7 @@ For the full javadocs look at <a href="javadocs/Gateway/index.html">Gateway docs
 <a name="employeeservice"></a>
 ### Employee Service
 
-![alt text](employeediagram.png "employee")
+![alt text](Employeediagram.png "employee")
 
 [![Employee Service](https://coveralls.io/repos/github/Ordineo/employee-core-service/badge.svg?branch=master)](https://coveralls.io/github/Ordineo/employee-core-service?branch=master) 
 
@@ -516,7 +516,7 @@ For the full javadocs look at <a href="javadocs/Employee/index.html">Employee do
 <a name="milestoneservice"></a>
 ### Milestone Service
 
-![alt text](milestonediagram.png "milestone")
+![alt text](Milestonediagram.png "milestone")
 
 [![Milestone Service](https://coveralls.io/repos/github/Ordineo/milestone-core-service/badge.svg?branch=master)](https://coveralls.io/github/Ordineo/milestone-core-service?branch=master) 
 
@@ -555,7 +555,7 @@ For the full javadocs look at <a href="javadocs/Milestone/index.html">Milestone 
 <a name="notificationservice"></a>
 ### Notification Service
 
-![alt text](notificationdiagram.png "notification")
+![alt text](Notificationdiagram.png "notification")
 
 [![Notification Service](https://coveralls.io/repos/github/Ordineo/notification-service/badge.svg?branch=master)](https://coveralls.io/github/Ordineo/notification-service?branch=master) 
 
@@ -581,7 +581,7 @@ Now we'll provide a short description per user story how to achieve it. This wil
 
 To user the tool we first need to log into our application.
 
-![alt text](userstoryScrnshot/login.png "log in")
+![alt text](userstoryScrnShot/login.png "log in")
 
 We provide our username and password and click login to finish logging in.
 
@@ -591,7 +591,7 @@ We provide our username and password and click login to finish logging in.
 To use the application we need to be logged in. 
 Check [login](#login)
 
-![alt text](userstoryScrnshot/loggedin.png "logged in")
+![alt text](userstoryScrnShot/loggedin.png "logged in")
 
 Here you can see your profile on the left side.
 You can click thee 'more' button to view more profile information.
@@ -604,7 +604,7 @@ If you click the pen icon in the top right of the profile section you can edit y
 To use the application we need to be logged in. 
 Check [login](#login)
 
-![alt text](userstoryScrnshot/loggedin.png "logged in")
+![alt text](userstoryScrnShot/loggedin.png "logged in")
 
 Here you can see your own milestones on the right side in a timeline.
 
@@ -618,12 +618,12 @@ Check [login](#login)
 
 To create a milestone we click the 'plus' button on the top right of the timeline.
 
-![alt text](userstoryScrnshot/loggedin.png "logged in")
+![alt text](userstoryScrnShot/loggedin.png "logged in")
 
 Here we can enter an objective, it will try to autocomplete to help you with your selection.
 You select an objective, enter the due date and optionally add some more information like personal motivation.
 
-![alt text](userstoryScrnshot/milestonecreate.png "milestone create")
+![alt text](userstoryScrnShot/milestonecreate.png "milestone create")
 
 <a name="detailsmilestone"></a>
 ### As an employee, I want to view the details of a milestone
@@ -631,11 +631,11 @@ You select an objective, enter the due date and optionally add some more informa
 To use the application we need to be logged in. 
 Check [login](#login)
 
-![alt text](userstoryScrnshot/loggedin.png "logged in")
+![alt text](userstoryScrnShot/loggedin.png "logged in")
 
 To see a milestones detail page you click the 'details' button or the milestone tab at the top left. A new page will open with the detail view.
 
-![alt text](userstoryScrnshot/milestonedetail.png "milestone detail")
+![alt text](userstoryScrnShot/milestonedetail.png "milestone detail")
 
 On this page you can see the details of this milestone on the left side.
 Additionally you can see a list of milestones on the right side to easily navigate to the other milestones.
@@ -649,7 +649,7 @@ Check [login](#login)
 
 To see comments and comment on a milestone you need to navigate to the detailpage. Check [milestone detail](#detailsmilestone)
 
-![alt text](userstoryScrnshot/milestonedetail.png "milestone detail")
+![alt text](userstoryScrnShot/milestonedetail.png "milestone detail")
 
 On this page at the bottom you can comment on this milestone.
 
