@@ -663,7 +663,7 @@ To edit a milestone you need to navigate to the detailpage. Check [milestone det
 
 Next we click on the pen icon in to top right of the milestone detail section, a modal will open up.
 
-![alt text](userstoryScrnshot/milestoneedit.png "milestone edit")
+![alt text](userstoryScrnShot/milestoneedit.png "milestone edit")
 
 Here we can edit the milestones information like due date, the extra information, and mark it as accomplished.
 
