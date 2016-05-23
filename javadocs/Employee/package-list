@@ -1,0 +1,8 @@
+be.ordina.ordineo
+be.ordina.ordineo.config
+be.ordina.ordineo.controller
+be.ordina.ordineo.employee.rest
+be.ordina.ordineo.filter
+be.ordina.ordineo.model
+be.ordina.ordineo.model.projection
+be.ordina.ordineo.repository

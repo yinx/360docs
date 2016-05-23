@@ -1,0 +1,7 @@
+be.ordina.ordineo.zuul
+be.ordina.ordineo.zuul.config
+be.ordina.ordineo.zuul.filter
+be.ordina.ordineo.zuul.security
+be.ordina.ordineo.zuul.security.controller
+be.ordina.ordineo.zuul.security.repository
+be.ordina.ordineo.zuul.security.service

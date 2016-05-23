@@ -1,0 +1,7 @@
+be.ordina.ordineo
+be.ordina.ordineo.config
+be.ordina.ordineo.model
+be.ordina.ordineo.model.projection
+be.ordina.ordineo.repository
+be.ordina.ordineo.security
+be.ordina.ordineo.util
