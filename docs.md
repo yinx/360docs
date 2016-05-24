@@ -5,26 +5,28 @@
 - [The Interns](#the_interns)
 - [The Project](#the_project)
 - [Continuous Integration](#ci)
-- [Technologies](#technologies)
-    - [Spring boot](#spring_boot)
-    - [Actuator](#actuator)
-    - [HATEOAS](#hateoas)
-    - [Spring cloud netflix](#netflix)
-    - [Eureka](#eureka)
-    - [Hystrix](#hystrix)
-    - [Ribbon](#ribbon)
-    - [Feign](#feign)
-    - [Zuul](#zuul)
-    - [JWT](#jwt)
-    - [Spring Data REST](#datarest)
-    - [RestDocs](#restdocs)
-- [Microservices](#microservices)
-    - [Gateway Service](#gatewayservice)
-    - [Employee Service](#employeeservice)
-    - [Milestone Service](#milestoneservice)
-    - [Notification Service](#notificationservice)
-    - Image Service (Not implemented)
-    - Social Service (Not implemented)
+- [Back-end](#back-end)
+    - [Technologies](#technologies)
+        - [Spring boot](#spring_boot)
+        - [Actuator](#actuator)
+        - [HATEOAS](#hateoas)
+        - [Spring cloud netflix](#netflix)
+        - [Eureka](#eureka)
+        - [Hystrix](#hystrix)
+        - [Ribbon](#ribbon)
+        - [Feign](#feign)
+        - [Zuul](#zuul)
+        - [JWT](#jwt)
+        - [Spring Data REST](#datarest)
+        - [RestDocs](#restdocs)
+    - [Microservices](#microservices)
+        - [Gateway Service](#gatewayservice)
+        - [Employee Service](#employeeservice)
+        - [Milestone Service](#milestoneservice)
+        - [Notification Service](#notificationservice)
+        - Image Service (Not implemented)
+        - Social Service (Not implemented)
+- [Front-end](#front-end)
 - [User Stories](#userstories)
     - [As an employee, I want to log in](#login)
     - [As an employee, I want to see my profile](#profile)
@@ -84,13 +86,15 @@ If the travis build does not succeed the developer will have to go back and fix 
 After a pull request gets permission to be merged travis has another go at building, just to be sure!
 After this build is successful travis automatically deploys to pivotal where all the master branches of the services are deployed.
 
+<a name="back-end"></a>
+## Back-end 
 <a name="technologies"></a>
-## Technologies 
+### Technologies 
 
 As mentioned previously the tool uses the newest java technologies and microservices as a learning experience.
 The microservices use maven to set up dependencies.
 <a name="spring_boot"></a>
-### Spring boot 
+#### Spring boot 
 
 Spring boot makes it easy to create stand-alone Spring based applications with very little spring configuration.
 It features embedded services like tomcat, jetty or undertow and much more.
@@ -99,7 +103,7 @@ It allows you to generate a basic Spring boot project with the dependencies you 
 
 Next we'll go into some details about the dependencies we used.
 <a name="actuator"></a>
-### Spring boot actuator 
+#### Spring boot actuator 
 
 Actuator is an easy little dependency that generated some endpoints to help you determine the health and metrics of your application.
 To install actuator all we need to do is add a dependency to our pom file.
@@ -113,7 +117,7 @@ That's it.
 Now you have a whole list of endpoints that can tell you more about your application.
 To learn more about actuator and the endpoints it exposes visit <http://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#production-ready>
 <a name="hateoas"></a>
-### Spring HATEOAS 
+#### Spring HATEOAS 
 
 Spring HATEOAS provides some extra features to help our RESTAPI use the HATEOAS constraints on the REST architecture.
 To install HATEOAS we add this dependency to the pom file.
@@ -144,13 +148,13 @@ public class MilestoneCoreApplication {
 }
 ```
 <a name="netflix"></a>
-### Spring cloud netflix 
+#### Spring cloud netflix 
 
 Netflix has been using the microservice architecture for a while now in their online platform.
 And as such have developed multiple packages to aid them, and they made them open source!
 We use a few of them as a core of our architecture.
 <a name="eureka"></a>
-### Eureka 
+#### Eureka 
 
 Eureka is one of the key tenets of a microservice architecture. Eureka is the discovery client and server of our project.
 The Eureka server is itself a microservice and receives meta-data, heartbeats etc. from each instance belonging to a service.
@@ -199,7 +203,7 @@ public class ServiceRegistryApplication {
 
 Our Eureka service is located at <https://github.com/Ordineo/eureka>
 <a name="hystrix"></a>
-### Hystrix 
+#### Hystrix 
 
 Hystrix is another Netflix component, we have it set up but currently don't use the hystrix service in production.
 Hystrix implements the circuit breaker pattern.
@@ -212,12 +216,12 @@ After a while of not being called the circuit is closed again in the hopes the f
 
 Our hystrix service is located at <https://github.com/Ordineo/hystrix>
 <a name="ribbon"></a>
-### Ribbon 
+#### Ribbon 
 
 Ribbon is a client side load balancer. We don't need to do very much ourselves as most of ribbon works out of the box since we use feign, eureka and zuul.
 We will go in to more details when we talk about feign and zuul.
 <a name="feign"></a>
-### Feign 
+#### Feign 
 
 Feign is netflix' declarative REST client. We use feign in one or two services to help us create a rest client.
 Feign integrates Ribbon and Eureka to provide a load balanced http client when using Feign.
@@ -237,7 +241,7 @@ public class MilestoneCoreApplication {
 Now we're set up to declare a Feign client since this annotation scans for interfaces that declare they are feign clients.
 We won't go into more details as we didn't use Feign in the services we worked on.
 <a name="zuul"></a>
-### Zuul (Gateway) 
+#### Zuul (Gateway) 
 
 Routing is an integral part of a microservice architecture. For example, "/" may be mapped to your web application, "/api/users" is mapped to the user service and "/api/shop" is mapped to the shop service.
 This routing is made a lot easier with the help of Zuul.
@@ -263,7 +267,7 @@ The proxy uses Ribbon to locate an instance to forward to via discovery, and all
 
 Our zuul service is located at <https://github.com/Ordineo/gateway>
 <a name="jwt"></a>
-### JWT 
+#### JWT 
 
 JWT tokens or Json web token are an open industry method for representing claims securely between two parties.
 We use JWT tokens as our solution to stateless authorization among our services.
@@ -327,7 +331,7 @@ Authorization : Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJOaXZlayIsInJvbGUiOiJbUk9M
 
 More info on JWT tokens you can find at <https://jwt.io/introduction/>
 <a name="datarest"></a>
-### Spring data rest 
+#### Spring data rest 
 
 Spring Data REST builds on top of Spring Data repositories, analyses your application’s domain model and exposes hypermedia-driven HTTP resources for aggregates contained in the model.
 Spring Data REST exposes a discoverable REST API for our models using HAL as media type.
@@ -362,7 +366,7 @@ There is much more to Spring Data REST than what we're going to cover here.
 
 For more information you can check out <http://docs.spring.io/spring-data/rest/docs/2.5.1.RELEASE/reference/html/>
 <a name="restdocs"></a>
-### RestDocs 
+#### RestDocs 
 
 All these REST resources are great and all, but it would take us a lot of time to document all the resources and let the front-end team know what they can or can not do.
 To remedy this we use Restdocs together with ascii doctor.
@@ -456,13 +460,13 @@ Which will result in the following online docs <https://milestone-ordineo.cfapps
 
 This file is what we send to our front end team so they have a clear view of what our api requires.
 <a name="microservices"></a>
-## The microservices
+### The microservices
 
 ![alt text](µservices.png "microservices")
 
 Next up we'll provide some more details for each microservice, we'll go more in depth to the services we actually worked on as opposed to services like social or image which we have little to no knowledge of.
 <a name="gatewayservice"></a>
-### Gateway Service
+#### Gateway Service
 
 The first service we'll cover will be the Gateway service or Zuul since it is the service that each call will go through before it is sent to the other services.
 This makes it our entry point after the Front-end.
@@ -492,7 +496,7 @@ To authenticate a user the gateway uses basic authentication and then returns th
 For the full javadocs look at <a href="javadocs/Gateway/index.html">Gateway docs</a>
 
 <a name="employeeservice"></a>
-### Employee Service
+#### Employee Service
 
 ![alt text](Employeediagram.png "employee")
 
@@ -514,7 +518,7 @@ For the full javadocs look at <a href="javadocs/Employee/index.html">Employee do
 
 
 <a name="milestoneservice"></a>
-### Milestone Service
+#### Milestone Service
 
 ![alt text](Milestonediagram.png "milestone")
 
@@ -553,7 +557,7 @@ For the full javadocs look at <a href="javadocs/Milestone/index.html">Milestone 
 
 
 <a name="notificationservice"></a>
-### Notification Service
+#### Notification Service
 
 ![alt text](Notificationdiagram.png "notification")
 
@@ -570,6 +574,9 @@ It saves them to a local in memory database and adds a read property so the fron
 To make it easier to communicate what our api actually does we created RESTdocs which you can find at <https://notification-ordineo.cfapps.io/generated-docs/api-guide.html>
 
 For the full javadocs look at <a href="javadocs/Notification/index.html">Notification docs</a>
+
+<a name="front-end"></a>
+## Front-end
 
 <a name="userstories"></a>
 ## User Stories 
