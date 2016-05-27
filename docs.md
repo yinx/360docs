@@ -239,7 +239,7 @@ public class MilestoneCoreApplication {
 ```
 
 Now we're set up to declare a Feign client since this annotation scans for interfaces that declare they are feign clients.
-We won't go into more details as we didn't use Feign in the services we worked on.
+
 <a name="zuul"></a>
 #### Zuul (Gateway) 
 
