@@ -45,7 +45,7 @@ The sources of the project are hosted on GitHub and are available [here](https:/
 
 As a first milestone we want the tool to be used for providing an overview and tracking the career of each individual employee of the Jworks Ordina Business Unit.
 Each employee will have a time line in which events such as objectives, activities attended and availability will be tracked. 
-The tool will help the coaches following up coaches and their progress. 
+The tool will help coaches follow up the progress of their coachees.
 For each employee a set of skills will also be stored together with the competence level. 
 In a later stadium a reporting functionality should be added to extract the data into useful reports used for helping to evaluate employees or deciding the topic the next workshop should be about.
 
@@ -60,7 +60,7 @@ This included but wasn't limited to the creation, reading, updating and deleting
 It also included a notification service to send notifications regarding milestones.
 
 Christophe mainly took care of front-end development while Philippe jumped onto back-end.
-This agreement would end up serving the team well as most of the back end developers ended up being sent on assignment and not having enough work to split between them while the workload on the front end would be a lot greater.
+This agreement would end up serving the team well as most of the back-end developers ended up being sent on assignment and not having enough work to split between them while the workload on the front end would be a lot greater.
 
 <a name="the_project"></a>
 ## The Project 
@@ -97,7 +97,7 @@ The microservices use maven to set up dependencies.
 #### Spring boot 
 
 Spring boot makes it easy to create stand-alone Spring based applications with very little spring configuration.
-It features embedded services like tomcat, jetty or undertow and much more.
+It features embedded services like Tomcat, Jetty or Undertow and much more.
 An easy service we used to start our microservices is <https://start.spring.io>.
 It allows you to generate a basic Spring boot project with the dependencies you want to use.
 
@@ -127,7 +127,7 @@ To install HATEOAS we add this dependency to the pom file.
     <artifactId>spring-boot-starter-hateoas</artifactId>
 </dependency>
 ```
-We used HATEOAS to make all our models implement Identifiable<> as follow:
+We used HATEOAS to make all our models implement `Identifiable<>` as follow:
 
 ```java
 public class Milestone implements Identifiable<Long> 
