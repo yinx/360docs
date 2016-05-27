@@ -218,12 +218,12 @@ Our hystrix service is located at <https://github.com/Ordineo/hystrix>
 <a name="ribbon"></a>
 #### Ribbon 
 
-Ribbon is a client side load balancer. We don't need to do very much ourselves as most of ribbon works out of the box since we use feign, eureka and zuul.
-We will go in to more details when we talk about feign and zuul.
+Ribbon is a client side load balancer. We don't need to do very much ourselves as most of ribbon works out of the box since we use Feign, Eureka and Zuul.
+We will go in to more details when we talk about Feign and Zuul.
 <a name="feign"></a>
 #### Feign 
 
-Feign is netflix' declarative REST client. We use feign in one or two services to help us create a rest client.
+Feign is Netflix' declarative REST client. We use feign in one or two services to help us create a rest client.
 Feign integrates Ribbon and Eureka to provide a load balanced http client when using Feign.
 To start using Feign you annotate your main class.
 
