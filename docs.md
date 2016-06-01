@@ -160,8 +160,8 @@ Eureka is one of the key tenets of a microservice architecture. Eureka is the di
 The Eureka server is itself a microservice and receives meta-data, heartbeats etc. from each instance belonging to a service.
 If a heartbeat fails, the instance is usually removed from the registry.
 
-Each service is required to register itself with the Eureka server and provides meta-data about itself like host and port, health, home page etc. 
-This helps us in multiple ways, our Eureka server knows about all the services and instances so if we were to start scaling our services Eureka already helps us with this by keeping a registry of all the services.
+Each service is required to register itself with the Eureka server and provides meta-data about itself like host and port, health, home page etc.
+This helps us in multiple ways. Our Eureka server knows about all the services and instances. Eureka helps us scale our services by keeping a registry of all the services.
 
 To set up Eureka and register a service with the server we just need some annotations and a few settings in our application.yml file.
 
@@ -218,12 +218,12 @@ Our hystrix service is located at <https://github.com/Ordineo/hystrix>
 <a name="ribbon"></a>
 #### Ribbon 
 
-Ribbon is a client side load balancer. We don't need to do very much ourselves as most of ribbon works out of the box since we use feign, eureka and zuul.
-We will go in to more details when we talk about feign and zuul.
+Ribbon is a client side load balancer. We don't need to do very much ourselves as most of ribbon works out of the box since we use Feign, Eureka and Zuul.
+We will go in to more details when we talk about Feign and Zuul.
 <a name="feign"></a>
 #### Feign 
 
-Feign is netflix' declarative REST client. We use feign in one or two services to help us create a rest client.
+Feign is Netflix' declarative REST client. We use feign in one or two services to help us create a rest client.
 Feign integrates Ribbon and Eureka to provide a load balanced http client when using Feign.
 To start using Feign you annotate your main class.
 
@@ -239,7 +239,7 @@ public class MilestoneCoreApplication {
 ```
 
 Now we're set up to declare a Feign client since this annotation scans for interfaces that declare they are feign clients.
-We won't go into more details as we didn't use Feign in the services we worked on.
+
 <a name="zuul"></a>
 #### Zuul (Gateway) 
 
@@ -247,9 +247,9 @@ Routing is an integral part of a microservice architecture. For example, "/" may
 This routing is made a lot easier with the help of Zuul.
 Not only that, but we use our Zuul service as our authentication service as well.
 
-Zuul essentially functions as an reverse proxy to ease the development of a very common use case where a UI application wants to proxy calls to one or more back end services.
+Zuul essentially functions as a reverse proxy to ease the development of a very common use case where a UI application wants to proxy calls to one or more back-end services.
 This feature is useful for a user interface to proxy to the back-end services it requires, avoiding the need to manage CORS and authentication concerns independently for all the back-ends.
-To enable it we annotate our main class with @EnableZuulProxy and this forwards local calls to the appropriate service.
+To enable it we annotate our main class with `@EnableZuulProxy` which forwards local calls to the appropriate service.
 
 ```java
 @SpringBootApplication
@@ -262,8 +262,8 @@ public class ZuulApplication{
 }
 ```
 
-By convention, a service with the ID "milestones", will receive requests from the proxy located at "/milestones"s (with the prefix stripped). 
-The proxy uses Ribbon to locate an instance to forward to via discovery, and all requests are executed in a hystrix command, so failures will show up in Hystrix metrics, and once the circuit is open the proxy will not try to contact the service.
+By convention, a service with the ID "milestones", will receive requests from the proxy located at "/milestones" (with the prefix stripped).
+The proxy uses Ribbon to locate an instance to forward to via discovery. All requests are executed in a Hystrix command, so failures will show up in Hystrix metrics and once the circuit is open the proxy will not try to contact the service.
 
 Our zuul service is located at <https://github.com/Ordineo/gateway>
 <a name="jwt"></a>
