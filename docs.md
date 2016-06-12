@@ -611,7 +611,8 @@ Webpack can also listen to file changes, if we make adjustments in our code webp
 
 #### NPM
 ![alt text](npm.png "NPM")
-TODO
+
+npm is the package manager for JavaScript. We use it to add our dependencies like TypeScript, momentJS and Angular Material.
 
 #### AngularJS with TypeScript
 ![alt text](Angular&Typescript.png "Angular and TypeScript")
@@ -625,13 +626,20 @@ We use Webpack to transpile the AngularJS code from TypeScript to plain JavaScri
 
 #### Angular Material
 ![alt text](Material.png "Angular Material")
-TODO
+
+>Angular Material is both a UI Component framework and a reference implementation of Google's Material Design Specification. This project provides a set of reusable, well-tested, and accessible UI components based on Material Design. - material.angularjs.org
+
+The front-end of this project was created with the use of the material design components this framework has to offer.
 
 #### Testing
 ![alt text](Karma.png "Karma")
 ![alt text](Codecept.jpg "CodeceptJS")
 
-TODO
+To run our tests we use Karma with Jasmine. 
+
+Karma is a test runner for AngularJS and Jasmine is the testing frameform.
+
+>Jasmine is a behavior driven development framework for JavaScript that has become the most popular choice for testing Angular applications. Jasmine provides functions to help with structuring your tests and also making assertions. As your tests grow, keeping them well structured and documented is vital, and Jasmine helps achieve this. - angularjs.org
 
 <a name="userstories"></a>
 ## User Stories 
