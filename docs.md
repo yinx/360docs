@@ -27,6 +27,12 @@
         - Image Service (Not implemented)
         - Social Service (Not implemented)
 - [Front-end](#front-end)
+    - [Technologies](#fe-technologies)
+        - Webpack
+        - NPM
+        - AngularJS with TypeScript
+        - Angular Material
+        - Testing
 - [User Stories](#userstories)
     - [As an employee, I want to log in](#login)
     - [As an employee, I want to see my profile](#profile)
@@ -577,6 +583,54 @@ For the full javadocs look at <a href="javadocs/Notification/index.html">Notific
 
 <a name="front-end"></a>
 ## Front-end
+
+<a name="fe-technologies"></a>
+### Technologies 
+
+#### Webpack
+![alt text](Webpack.jpg "Webpack")
+
+Webpack is a tool for bundling static assets. With static assets we mean images / css / javascript / fonts / files etc. It is also used as a build tool to automate certain tasks, and create a deployable application.
+ 
+You start with an entry file. In the 360 ​​tool that is src / bootstrap.ts. Webpack looks at the import statements from the file and tries to load it in so it can bundle this together into one JavaScript file.
+
+The loading is done using "loaders." When it encounters a .ts import statement, webpack uses a loader to read this file and transpile it to javascript, so it can put this in the final bundle.
+
+Some examples of loaders:
+
+- Sass-loader: .scss translate to css
+- CSS loader: load css files
+- Tslint loader: Check .ts files according to a particular style guide (json file with tslint rules)
+- Etc ...
+
+While loaders apply to any file webpack loads, we also have plugins that are applied on the generated bundle itself.
+
+For example, there is a mangle plugin that makes the bundle unreadable code.
+
+Webpack can also listen to file changes, if we make adjustments in our code webpack automatically generates a new bundle. Along with the webpack-dev server we can increase our productivity by automatically refreshing the browser on every code change.
+
+#### NPM
+![alt text](npm.png "NPM")
+
+#### AngularJS with TypeScript
+![alt text](Angular&Typescript.png "Angular and TypeScript")
+
+>HTML is great for declaring static documents, but it falters applications. AngularJS lets you extend HTML vocabulary for your application. The resulting environment is extraordinarily expressive, readable, and quick to develop.
+>-angularjs.org
+
+TypeScript offers support for the latest and evolving JavaScript features, including those from ECMAScript 2015.
+
+We use Webpack to transpile the AngularJS code from TypeScript to plain JavaScript.
+
+#### Angular Material
+![alt text](Material.png "Angular Material")
+
+
+#### Testing
+![alt text](Karma.png "Karma")
+![alt text](Codecept.jpg "CodeceptJS")
+
+TODO
 
 <a name="userstories"></a>
 ## User Stories 
