@@ -637,7 +637,7 @@ The front-end of this project was created with the use of the material design co
 
 To run our tests we use Karma with Jasmine. 
 
-Karma is a test runner for AngularJS and Jasmine is the testing frameform.
+Karma is a test runner for AngularJS and Jasmine is the testing framework.
 
 >Jasmine is a behavior driven development framework for JavaScript that has become the most popular choice for testing Angular applications. Jasmine provides functions to help with structuring your tests and also making assertions. As your tests grow, keeping them well structured and documented is vital, and Jasmine helps achieve this. - angularjs.org
 
