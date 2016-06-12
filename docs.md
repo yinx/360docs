@@ -611,6 +611,7 @@ Webpack can also listen to file changes, if we make adjustments in our code webp
 
 #### NPM
 ![alt text](npm.png "NPM")
+TODO
 
 #### AngularJS with TypeScript
 ![alt text](Angular&Typescript.png "Angular and TypeScript")
@@ -624,7 +625,7 @@ We use Webpack to transpile the AngularJS code from TypeScript to plain JavaScri
 
 #### Angular Material
 ![alt text](Material.png "Angular Material")
-
+TODO
 
 #### Testing
 ![alt text](Karma.png "Karma")
